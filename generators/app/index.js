@@ -43,6 +43,12 @@ module.exports = yeoman.Base.extend({
       this.templatePath('dummyfile.txt'),
       this.destinationPath('app/dummyfile.txt')
     );
+
+    this.fs.copyTpl(
+      this.templatePath('_package.json'),
+      this.destinationPath('package.json'),
+      this.props
+    );
   },
 
   install: function () {
