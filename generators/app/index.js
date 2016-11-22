@@ -7,14 +7,29 @@ module.exports = yeoman.Base.extend({
   prompting: function () {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the peachy ' + chalk.red('generator-angular-es-6') + ' generator!'
+      'Welcome to the ' + chalk.red('AngularJS ES6') + ' generator!'
     ));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'input',
+      name: 'appName',
+      message: 'What\'s the name of your application?',
+      default: 'Angular-ES6'
+    }, {
+      type: 'input',
+      name: 'appDescription',
+      message: 'Enter a description for your application:',
+      default: 'AngularJS application with ES6, Gulp and Sass'
+    }, {
+      type: 'input',
+      name: 'appKeywords',
+      message: 'Enter your application keywords (comma separated):',
+      default: 'AngularJS, ES6, Gulp, Sass'
+    }, {
+      type: 'input',
+      name: 'appAuthor',
+      message: 'Enter an author name for your application:',
+      default: 'AngAuthor'
     }];
 
     return this.prompt(prompts).then(function (props) {
@@ -26,7 +41,7 @@ module.exports = yeoman.Base.extend({
   writing: function () {
     this.fs.copy(
       this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.destinationPath('app/dummyfile.txt')
     );
   },
 
