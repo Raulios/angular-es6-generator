@@ -4,10 +4,9 @@ var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
 describe('generator-angular-es-6:app', function () {
-  before(function () {
-    return helpers.run(path.join(__dirname, '../generators/app'))
-      .withPrompts({someAnswer: true})
-      .toPromise();
+  before(function (done) {
+    helpers.run(path.join(__dirname, '../generators/app'))
+      .on('end', done);
   });
 
   it('creates files', function () {
