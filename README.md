@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # generator-angular-es-6 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > Yeoman generator for AngularJS apps using ES6, Gulp and SASS
 
@@ -38,4 +37,3 @@ MIT © [Raúl Molina](https://github.com/Raulios)
 =======
 # angular-es6-generator
 Yeoman generator to build AngularJS applications with ES6, Gulp and Sass, using a modular approach and components.
->>>>>>> bac5afd11ec38238147e71b22b0f8e89bdb7a3a0
