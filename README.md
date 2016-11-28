@@ -1,4 +1,4 @@
-# generator-angular-es-6 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-angular-es-6 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 > Yeoman generator for AngularJS apps using ES6, Gulp and SASS
 
 ## Installation
