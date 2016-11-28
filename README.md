@@ -23,10 +23,10 @@ MIT © [Raúl Molina](https://github.com/Raulios)
 
 [npm-image]: https://badge.fury.io/js/generator-angular-es-6.svg
 [npm-url]: https://npmjs.org/package/generator-angular-es-6
-[travis-image]: https://travis-ci.org/Raulios/generator-angular-es-6.svg?branch=master
-[travis-url]: https://travis-ci.org/Raulios/generator-angular-es-6
-[daviddm-image]: https://david-dm.org/Raulios/generator-angular-es-6.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/Raulios/generator-angular-es-6
+[travis-image]: https://travis-ci.org/Raulios/angular-es6-generator.svg?branch=master
+[travis-url]: https://travis-ci.org/Raulios/angular-es6-generator
+[daviddm-image]: https://david-dm.org/Raulios/angular-es6-generator.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/Raulios/angular-es6-generator
 =======
 # angular-es6-generator
 Yeoman generator to build AngularJS applications with ES6, Gulp and Sass, using a modular approach and components.
