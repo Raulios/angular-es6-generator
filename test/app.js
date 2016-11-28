@@ -12,7 +12,11 @@ describe('generator-angular-es-6:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'dummyfile.txt'
+      'index.html',
+      'package.json',
+      'gulpfile.js',
+      'app/app.js',
+      'app/assets/vendor/normalize.css'
     ]);
   });
 });
