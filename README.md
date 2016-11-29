@@ -48,9 +48,11 @@ Type on your terminal:
 gulp build
 ```
 
-> This will start your application in the same way as the previous command, with the exception that it won't "watch" for changes in the code, so if you need to see some new changes you will have to run the command again.
+> This will prepare your files for production (concat, minify, inject...) and start your application in the same way as the previous command but from the `dist/` folder and with no auto sync.
 
-## Application files
+## Application files / Folder structure
+
+Please refer to the [Angular ES6 Boilerplate](https://github.com/Raulios/angular-es6-boilerplate) for files and structure info.
 
 ## License
 
