@@ -11,22 +11,44 @@ The folder structure and use of components are based on this [Thinkster article]
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-angular-es-6 using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First install [Yeoman](http://yeoman.io) if needed:
 
 ```bash
 npm install -g yo
+```
+
+Then install the generator:
+
+```bash
 npm install -g generator-angular-es-6
 ```
 
-Then generate your new project:
+Finally, to generate a new project:
 
 ```bash
 yo angular-es-6
 ```
+> The generator will prompt you for some information like the app name, description, author... The info will be included in some parts of the code such as your package.json
 
 ## Run project on development
 
+Type on your terminal:
+
+```bash
+gulp
+```
+
+> This will start your application in your default browser at `localhost:4000`. Thanks to BrowserSync and Gulp there's no need of refreshing everytime you do some changes in the code, it will happen automatically.
+
 ## Run project on production
+
+Type on your terminal:
+
+```bash
+gulp build
+```
+
+> This will start your application in the same way as the previous command, with the exception that it won't "watch" for changes in the code, so if you need to see some new changes you will have to run the command again.
 
 ## Application files
 
