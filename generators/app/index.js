@@ -30,7 +30,16 @@ module.exports = yeoman.Base.extend({
       name: 'appAuthor',
       message: 'Enter an author name for your application:',
       default: 'AngAuthor'
-    }];
+    }, {
+      type: 'list',
+      name: 'ui',
+      message: 'Select the UI Framework you want to use:',
+      choices: [
+        'None',
+        'Angular UI Bootstrap'
+      ]
+    }
+    ];
 
     return this.prompt(prompts).then(function (props) {
       // To access props later use this.props.someAnswer;
@@ -38,6 +47,7 @@ module.exports = yeoman.Base.extend({
       this.appDescription = props.appDescription;
       this.appKeywords = props.appKeywords;
       this.appAuthor = props.appAuthor;
+      this.ui = props.ui;
     }.bind(this));
   },
 
@@ -61,9 +71,10 @@ module.exports = yeoman.Base.extend({
       this
     );
 
-    this.fs.copy(
-      this.templatePath('app/app.js'),
-      this.destinationPath('app/app.js')
+    this.fs.copyTpl(
+      this.templatePath('app/_app.js'),
+      this.destinationPath('app/app.js'),
+      this
     );
 
     this.fs.copy(
@@ -71,10 +82,17 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('app/assets/sass/custom.scss')
     );
 
-    this.fs.copy(
-      this.templatePath('app/assets/vendor/normalize.css'),
-      this.destinationPath('app/assets/vendor/normalize.css')
-    );
+    if(this.ui == 'None') {
+      this.fs.copy(
+        this.templatePath('app/assets/vendor/normalize.css'),
+        this.destinationPath('app/assets/vendor/normalize.css')
+      );
+    } else if(this.ui == 'Angular UI Bootstrap') {
+      this.fs.copy(
+        this.templatePath('app/assets/vendor/bootstrap.css'),
+        this.destinationPath('app/assets/vendor/bootstrap.css')
+      );
+    }
 
     this.fs.copy(
       this.templatePath('app/components/index.js'),

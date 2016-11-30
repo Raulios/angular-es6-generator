@@ -1,5 +1,6 @@
 import angular from 'angular';
-import 'angular-ui-router';
+import 'angular-ui-router'; <% if (ui == 'Angular UI Bootstrap') { %>
+import 'angular-ui-bootstrap'; <% } %>
 
 // Import our app config files
 import constants  from './config/app.constants';
@@ -18,7 +19,8 @@ import './home';
 
 // Create and bootstrap application
 const requires = [
-  'ui.router',
+  'ui.router', <% if (ui == 'Angular UI Bootstrap') { %>
+  'ui.bootstrap', <% } %>
   'templates',
   'app.components',
   'app.services',
