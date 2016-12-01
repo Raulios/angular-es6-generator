@@ -11,7 +11,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.5.8", <% if (modules) { <% if(modules.indexOf('ngAnimate') > -1) { %>
+    "angular": "^1.5.8", <% if (modules) { %> <% if(modules.indexOf('ngAnimate') > -1) { %>
     "angular-animate": "^1.5.9", <% } %> <% if(modules.indexOf('ngTouch') > -1) { %>
     "angular-touch": "^1.5.9", <% } %> <% } %> <% if (ui == 'Angular UI Bootstrap') { %>
     "angular-ui-bootstrap": "^2.3.0", <% } %>
