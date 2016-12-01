@@ -16,7 +16,6 @@ describe('generator-angular-es-6:app', function () {
       'package.json',
       'gulpfile.js',
       'app/app.js',
-      'app/assets/vendor/normalize.css',
       'app/assets/sass/custom.scss',
       'app/components/index.js',
       'app/config/app.config.js',
