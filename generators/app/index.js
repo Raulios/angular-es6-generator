@@ -145,9 +145,10 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('app/layout/footer.component.js')
     );
 
-    this.fs.copy(
-      this.templatePath('app/layout/header.component.js'),
-      this.destinationPath('app/layout/header.component.js')
+    this.fs.copyTpl(
+      this.templatePath('app/layout/_header.component.js'),
+      this.destinationPath('app/layout/header.component.js'),
+      this
     );
 
     this.fs.copy(
@@ -155,9 +156,10 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('app/layout/footer.html')
     );
 
-    this.fs.copy(
-      this.templatePath('app/layout/header.html'),
-      this.destinationPath('app/layout/header.html')
+    this.fs.copyTpl(
+      this.templatePath('app/layout/_header.html'),
+      this.destinationPath('app/layout/header.html'),
+      this
     );
 
     this.fs.copy(
