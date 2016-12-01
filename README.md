@@ -28,7 +28,7 @@ Finally, to generate a new project:
 ```bash
 yo angular-es-6
 ```
-> The generator will prompt you for some information like the app name, description, author... The info will be included in some parts of the code such as your package.json
+> The generator will prompt you for some information like the app name, description, author... or if you want to install the Bootstrap UI, and modules like ngAnimate and ngTouch.
 
 ## Run project on development
 
