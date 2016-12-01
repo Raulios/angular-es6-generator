@@ -1,5 +1,7 @@
 import angular from 'angular';
-import 'angular-ui-router'; <% if (ui == 'Angular UI Bootstrap') { %>
+import 'angular-ui-router'; <% if(modules.indexOf('ngAnimate') > -1) { %>
+import 'angular-animate'; <% } %> <% if(modules.indexOf('ngTouch') > -1) { %>
+import 'angular-touch' <% } %> <% if (ui == 'Angular UI Bootstrap') { %>
 import 'angular-ui-bootstrap'; <% } %>
 
 // Import our app config files
@@ -19,7 +21,9 @@ import './home';
 
 // Create and bootstrap application
 const requires = [
-  'ui.router', <% if (ui == 'Angular UI Bootstrap') { %>
+  'ui.router', <% if(modules.indexOf('ngAnimate') > -1) { %>
+  'ngAnimate', <% } %> <% if(modules.indexOf('ngTouch') > -1) { %>
+  'ngTouch', <% } %> <% if (ui == 'Angular UI Bootstrap') { %>
   'ui.bootstrap', <% } %>
   'templates',
   'app.components',

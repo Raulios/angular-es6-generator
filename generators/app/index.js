@@ -38,6 +38,19 @@ module.exports = yeoman.Base.extend({
         'None',
         'Angular UI Bootstrap'
       ]
+    }, {
+      type: 'checkbox',
+      name: 'modules',
+      message: 'Select the modules you want to install:',
+      choices: [{
+        value: 'ngAnimate',
+        name: 'ngAnimate (required for Bootstrap UI animations)',
+        checked: false
+      }, {
+        value: 'ngTouch',
+        name: 'ngTouch (required for Bootstrap UI swipe actions)',
+        checked: false
+      }]
     }
     ];
 
@@ -48,6 +61,7 @@ module.exports = yeoman.Base.extend({
       this.appKeywords = props.appKeywords;
       this.appAuthor = props.appAuthor;
       this.ui = props.ui;
+      this.modules = props.modules;
     }.bind(this));
   },
 
