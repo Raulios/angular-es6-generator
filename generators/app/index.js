@@ -125,9 +125,10 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('app/home/home.controller.js')
     );
 
-    this.fs.copy(
-      this.templatePath('app/home/home.html'),
-      this.destinationPath('app/home/home.html')
+    this.fs.copyTpl(
+      this.templatePath('app/home/_home.html'),
+      this.destinationPath('app/home/home.html'),
+      this
     );
 
     this.fs.copy(
